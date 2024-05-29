@@ -14,20 +14,24 @@ let adj = ["great", "big"];
 
 let noun = ["jogger", "racoon"];
 
-//Creo una funcion que randomiza
+let dominio = "";
 
-function random(len) {
-  return Math.floor(Math.random() * len);
+//Creo el loop
+
+for (let i = 0; i < pronoun.length; i++) {
+  for (let j = 0; j < adj.length; j++) {
+    for (let k = 0; k < noun.length; k++) {
+      const loopedpronoun = pronoun[i];
+      const loopedadj = adj[j];
+      const loopednoun = noun[k];
+
+      let loopedDominio =
+        loopedpronoun + loopedadj + loopednoun + ".com" + "<br>";
+      dominio += loopedDominio;
+    }
+  }
 }
 
-// organizo el dominio
+// Modifico el html
 
-const dominio =
-  pronoun[random(pronoun.length)] +
-  adj[random(pronoun.length)] +
-  noun[random(noun.length)] +
-  ".com";
-
-// Elijo el HTML que quiero modificar
-
-document.querySelector("p").innerText = dominio;
+document.querySelector("p").innerHTML = dominio;
