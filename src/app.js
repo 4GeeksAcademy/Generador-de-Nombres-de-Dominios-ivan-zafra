@@ -24,9 +24,7 @@ function random(len) {
 
 const dominio =
   pronoun[random(pronoun.length)] +
-  " " +
   adj[random(pronoun.length)] +
-  " " +
   noun[random(noun.length)] +
   ".com";
 
